@@ -5,7 +5,40 @@
 <title>FiTMAPPED - User Profile Dev</title>
 
 <link rel="stylesheet" href="css/user-profile.css">
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<!-- calendar files -->
+
+<link rel='stylesheet' href='css/theme.css' />
+<link href='css/fullcalendar.css' rel='stylesheet' />
+<link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<!--<script src='jquery/jquery-1.10.2.min.js'></script>-->
+<script src='jquery/jquery-ui-1.10.3.custom.min.js'></script>
+<script src='jquery/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			theme: true,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			
+		});
+		
+	});
+
+</script>
+<!-- calendar files -->
 
 </head>
 <body>
@@ -66,7 +99,7 @@
 
 				<div class="calendar-wrap">
 					<h4>Calendar</h4>
-					<div class="calendar"></div>
+					<div id='calendar' class="calendar"></div>
 				</div>
 
 				<div class="activities-wrap">
