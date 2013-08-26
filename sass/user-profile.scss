@@ -1,0 +1,450 @@
+// Imports
+// *********************************
+
+@import "compass/reset";
+@import "compass/css3";
+@import "variables";
+@import "fonts";
+@import "mixins";
+
+// Universal & Body
+// *********************************
+
+* {
+	@include box-sizing(border-box);
+}
+
+body {
+	color:$grey;
+	font: {
+		family: $Helvetica;
+		weight: normal;
+	}
+	@include font-size(0.875);
+	line-height: 1.125em;
+	margin:50px 0;
+}
+
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.float-left {
+	float:left;
+}
+
+a {
+	@include transition(all 0.3s ease-in-out);
+	&:hover {
+		@include transition(all 0.3s ease-in-out);
+	}
+}
+
+// Headings & Text
+// *********************************
+
+.icon {
+	font: {
+		family: "FontAwesome";
+		size: 1em;
+		weight: normal;
+		style: normal;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	color:$teal;
+	margin-bottom:$margin / 2;
+}
+
+h1 { @include font-size(2.5); }
+h2 { @include font-size(1.875); }
+h3 { @include font-size(1.5); }
+h4 { @include font-size(1.125); }
+h5 { @include font-size(0.875); }
+h6 { @include font-size(0.750); }
+
+// Buttons
+// *********************************
+
+.btn {
+	display:inline-block;
+	height:30px;
+	padding:0 10px;
+	text-align:center;
+	font-size:12px;
+	font-weight:500;
+	line-height:30px;
+	text-transform:uppercase;
+	background-color:$blue;
+	color:$white;
+	@include border-radius(4px, 4px);
+}
+
+// Structure
+// *********************************
+
+.container {
+	width:1000px;
+	margin:$margin auto;
+}
+
+.left-panel {
+	width:200px;
+	float:left;
+	margin-right:$margin;
+}
+
+.profile-content {
+	width:780px;
+	float:left;
+}
+
+.row {
+	padding: $row-padding;
+	border-bottom:$border-size $stroke $dkgrey;
+}
+
+// Left Panel
+// *********************************
+
+.user-avatar {
+}
+
+.user-img {
+	position:relative;
+	height:240px;
+	background-color:$ltgrey;
+	margin-bottom:1px;
+}
+
+.user-score {
+	height:80px;
+	background-color:$teal;
+	color:$white;
+	text-align:center;
+	line-height:2.125em;
+}
+
+.user-score--value {
+	padding-top:14px;
+	font: {
+		size:3em;
+	}
+}
+
+.user-score--title {
+	font: {
+		size:1.125em;
+	}
+}
+
+.add-friend-btn {
+	display:block;
+	position:absolute;
+	top:5px;
+	left:5px;
+	height:30px;
+	width:30px;
+	line-height:32px;
+	text-align:center;
+	color:$teal;
+	background:$white;
+	background-color:rgba(255,255,255,0.6);
+	cursor:pointer;
+	font-size:22px;
+
+	&:hover {
+		background-color:rgba(255,255,255,0.9);
+	}
+}
+
+.user-nav {
+	border: {
+		bottom: 1px solid $dkgrey;
+	}
+	li {
+		a {
+			display:block;
+			color:$blue;
+			text-decoration:none;
+			font-weight:bold;
+			padding:12px 0 12px 15px;
+			background-color:$ltgrey;
+			border: {
+				top: 1px solid $dkgrey;
+			}
+
+			&:hover {
+				background-color:$white;
+				color:$grey;
+			}
+		}
+	}
+}
+
+.user-nav-icon {
+	display:inline-block;
+	width:20px;
+	margin-right:6px;
+}
+
+// Profile Content
+// *********************************
+
+.user-heading {
+	padding-top:0;
+	@extend .clearfix;
+}
+
+.user-name {
+	font: {
+		size: 2.250em;
+		weight: bold;
+	}
+	line-height:1em;
+	color:$blue;
+	margin-bottom:$margin / 1.5;
+}
+
+.user-motto {
+	font: {
+		size: 2.250em;
+		weight: 100;
+	}
+	line-height:1.125em;
+	letter-spacing:0.05em;
+	color:$grey;
+
+	&:before, &:after {
+		display:inline-block;
+		position:relative;
+		top:25px;
+		font: {
+			size:3em;
+			weight:normal;
+		}
+		color:$grey;
+	}
+
+	&:before {
+		content: "\201C";
+		margin-right:5px;
+	}
+
+	&:after {
+		content: "\201D";
+		margin-left:5px;
+	}
+}
+
+.user-about p {
+	@include font-size(0.875);
+	color:$grey;
+}
+
+// Calendar
+// *********************************
+
+.user-calendar {
+	@extend .clearfix;
+}
+
+.calendar {
+	height:400px;
+	width:500px;
+	border:$border-size $stroke $dkgrey;
+}
+
+.calendar-wrap, .activities-wrap {
+	@extend .float-left;
+}
+
+.calendar-wrap {
+	width:500px;
+	margin-right:$margin;
+}
+
+.activities-wrap {
+	width:260px;
+}
+
+.activities--date {
+	color:$blue;
+}
+
+.activity-single {
+	margin-bottom:$margin / 2;
+}
+
+.activity-single--time {
+	color:$grey;
+	margin-bottom:$margin / 4;
+}
+
+.activity-single--summary {
+	@include font-size(0.750);
+}
+
+.activity-link {
+	text-decoration:underline;
+}
+
+// Badges
+// *********************************
+
+.badges {
+	@extend .clearfix;
+}
+
+.badge {
+	float:left;
+	width:20%;
+	text-align:center;
+}
+
+.badge-image {
+	margin-bottom:$margin / 2;
+	border:5px $stroke $dkgrey;
+	width:125px;
+	height:125px;
+	@include border-radius(50%, 50%);
+	background-color:$white;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.badge p {
+	@include font-size(0.750);
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+// Places
+// *********************************
+
+.places {
+	@extend .clearfix;
+}
+
+.places--where, .places--favs, .places--wants {
+	@extend .clearfix;
+	margin-bottom:20px;
+}
+
+.places-icon, .places-title {
+	color:$blue;
+}
+
+.places-icon {
+	@include font-size(1.125);
+}
+
+.places-title {
+	display:inline-block;
+}
+
+.place-single {
+	width:100%;
+	float:left;
+	border:1px $stroke $dkgrey;
+	height:82px;
+	margin-bottom:$margin / 2;
+}
+
+.place-single img {
+	height:80px;
+	width:80px;
+	border:none;
+	float:left;
+	margin-right:10px;
+}
+
+.place-name {
+	@include font-size(1.125);
+	font-weight:bold;
+	color:$grey;
+	display:block;
+}
+
+.place-single p {
+	float:left;
+	@include font-size(0.625);
+	padding:10px;
+	color:$grey;
+}
+
+.place-actions {
+	float:right;
+	li {
+		display:inline;
+		float:left;
+		padding:10px;
+		padding-left:0;
+		a {
+			display:block;
+			height:60px;
+			width:60px;
+			background-color:$teal;
+			text-decoration: none;
+			line-height:60px;
+			text-align:center;
+			font-size:24px;
+			color:$white;
+			&:hover {
+				background-color:$blue;
+			}
+		}
+	}
+}
+
+// Friends
+// *********************************
+
+.user-friends {
+	border-bottom:0;
+}
+
+.friends {
+	@extend .clearfix;
+}
+
+.friend-single {
+	float:left;
+	width:24%;
+	margin-right:1.33333%;
+	margin-bottom:10px;
+}
+
+.friend-single:nth-child(4) {
+	margin-right:0;
+}
+
+.friend-img {
+	position:relative;
+	margin-bottom:1px;
+}
+
+.friend-img img {
+	width:100%;
+	height:auto;
+	display:block;
+}
+
+.friend-name {
+	padding:10px;
+	@include font-size(0.875);
+	color:$white;
+	background-color:$teal;
+	width:100%;
+}

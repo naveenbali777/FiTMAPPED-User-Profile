@@ -1,0 +1,572 @@
+/* line 17, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-1.9.2-p320/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 13, ../sass/user-profile.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, ../sass/user-profile.scss */
+body {
+  color: #777777;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  line-height: 1.125em;
+  margin: 50px 0;
+}
+
+/* line 28, ../sass/user-profile.scss */
+.clearfix, .user-heading, .user-calendar, .badges, .places, .places--where, .places--favs, .places--wants, .friends {
+  zoom: 1;
+}
+/* line 30, ../sass/user-profile.scss */
+.clearfix:before, .user-heading:before, .user-calendar:before, .badges:before, .places:before, .places--where:before, .places--favs:before, .places--wants:before, .friends:before, .clearfix:after, .user-heading:after, .user-calendar:after, .badges:after, .places:after, .places--where:after, .places--favs:after, .places--wants:after, .friends:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+/* line 36, ../sass/user-profile.scss */
+.clearfix:after, .user-heading:after, .user-calendar:after, .badges:after, .places:after, .places--where:after, .places--favs:after, .places--wants:after, .friends:after {
+  clear: both;
+}
+
+/* line 41, ../sass/user-profile.scss */
+.float-left, .calendar-wrap, .activities-wrap {
+  float: left;
+}
+
+/* line 45, ../sass/user-profile.scss */
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* line 47, ../sass/user-profile.scss */
+a:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 55, ../sass/user-profile.scss */
+.icon {
+  font-family: "FontAwesome";
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 64, ../sass/user-profile.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #1bb9b5;
+  margin-bottom: 10px;
+}
+
+/* line 70, ../sass/user-profile.scss */
+h1 {
+  font-size: 40px;
+  line-height: 60px;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+/* line 71, ../sass/user-profile.scss */
+h2 {
+  font-size: 30px;
+  line-height: 45px;
+  font-size: 1.875rem;
+  line-height: 2.8125rem;
+}
+
+/* line 72, ../sass/user-profile.scss */
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+/* line 73, ../sass/user-profile.scss */
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+/* line 74, ../sass/user-profile.scss */
+h5 {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+}
+
+/* line 75, ../sass/user-profile.scss */
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* line 80, ../sass/user-profile.scss */
+.btn {
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  background-color: #0069a0;
+  color: white;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+}
+
+/* line 97, ../sass/user-profile.scss */
+.container {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+/* line 102, ../sass/user-profile.scss */
+.left-panel {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 108, ../sass/user-profile.scss */
+.profile-content {
+  width: 780px;
+  float: left;
+}
+
+/* line 113, ../sass/user-profile.scss */
+.row {
+  padding: 20px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* line 124, ../sass/user-profile.scss */
+.user-img {
+  position: relative;
+  height: 240px;
+  background-color: whitesmoke;
+  margin-bottom: 1px;
+}
+
+/* line 131, ../sass/user-profile.scss */
+.user-score {
+  height: 80px;
+  background-color: #1bb9b5;
+  color: white;
+  text-align: center;
+  line-height: 2.125em;
+}
+
+/* line 139, ../sass/user-profile.scss */
+.user-score--value {
+  padding-top: 14px;
+  font-size: 3em;
+}
+
+/* line 146, ../sass/user-profile.scss */
+.user-score--title {
+  font-size: 1.125em;
+}
+
+/* line 152, ../sass/user-profile.scss */
+.add-friend-btn {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  width: 30px;
+  line-height: 32px;
+  text-align: center;
+  color: #1bb9b5;
+  background: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 22px;
+}
+/* line 167, ../sass/user-profile.scss */
+.add-friend-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 172, ../sass/user-profile.scss */
+.user-nav {
+  border-bottom: 1px solid #ebebeb;
+}
+/* line 177, ../sass/user-profile.scss */
+.user-nav li a {
+  display: block;
+  color: #0069a0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0 12px 15px;
+  background-color: whitesmoke;
+  border-top: 1px solid #ebebeb;
+}
+/* line 188, ../sass/user-profile.scss */
+.user-nav li a:hover {
+  background-color: white;
+  color: #777777;
+}
+
+/* line 196, ../sass/user-profile.scss */
+.user-nav-icon {
+  display: inline-block;
+  width: 20px;
+  margin-right: 6px;
+}
+
+/* line 205, ../sass/user-profile.scss */
+.user-heading {
+  padding-top: 0;
+}
+
+/* line 210, ../sass/user-profile.scss */
+.user-name {
+  font-size: 2.250em;
+  font-weight: bold;
+  line-height: 1em;
+  color: #0069a0;
+  margin-bottom: 13.33333px;
+}
+
+/* line 220, ../sass/user-profile.scss */
+.user-motto {
+  font-size: 2.250em;
+  font-weight: 100;
+  line-height: 1.125em;
+  letter-spacing: 0.05em;
+  color: #777777;
+}
+/* line 229, ../sass/user-profile.scss */
+.user-motto:before, .user-motto:after {
+  display: inline-block;
+  position: relative;
+  top: 25px;
+  font-size: 3em;
+  font-weight: normal;
+  color: #777777;
+}
+/* line 240, ../sass/user-profile.scss */
+.user-motto:before {
+  content: "\201C";
+  margin-right: 5px;
+}
+/* line 245, ../sass/user-profile.scss */
+.user-motto:after {
+  content: "\201D";
+  margin-left: 5px;
+}
+
+/* line 251, ../sass/user-profile.scss */
+.user-about p {
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  color: #777777;
+}
+
+/* line 263, ../sass/user-profile.scss */
+.calendar {
+  height: 400px;
+  width: 500px;
+  border: 1px solid #ebebeb;
+}
+
+/* line 273, ../sass/user-profile.scss */
+.calendar-wrap {
+  width: 500px;
+  margin-right: 20px;
+}
+
+/* line 278, ../sass/user-profile.scss */
+.activities-wrap {
+  width: 260px;
+}
+
+/* line 282, ../sass/user-profile.scss */
+.activities--date {
+  color: #0069a0;
+}
+
+/* line 286, ../sass/user-profile.scss */
+.activity-single {
+  margin-bottom: 10px;
+}
+
+/* line 290, ../sass/user-profile.scss */
+.activity-single--time {
+  color: #777777;
+  margin-bottom: 5px;
+}
+
+/* line 295, ../sass/user-profile.scss */
+.activity-single--summary {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+/* line 299, ../sass/user-profile.scss */
+.activity-link {
+  text-decoration: underline;
+}
+
+/* line 310, ../sass/user-profile.scss */
+.badge {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+/* line 316, ../sass/user-profile.scss */
+.badge-image {
+  margin-bottom: 10px;
+  border: 5px solid #ebebeb;
+  width: 125px;
+  height: 125px;
+  -webkit-border-radius: 50% 50%;
+  -moz-border-radius: 50% / 50%;
+  border-radius: 50% / 50%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 327, ../sass/user-profile.scss */
+.badge p {
+  font-size: 12px;
+  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 340, ../sass/user-profile.scss */
+.places--where, .places--favs, .places--wants {
+  margin-bottom: 20px;
+}
+
+/* line 345, ../sass/user-profile.scss */
+.places-icon, .places-title {
+  color: #0069a0;
+}
+
+/* line 349, ../sass/user-profile.scss */
+.places-icon {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+}
+
+/* line 353, ../sass/user-profile.scss */
+.places-title {
+  display: inline-block;
+}
+
+/* line 357, ../sass/user-profile.scss */
+.place-single {
+  width: 100%;
+  float: left;
+  border: 1px solid #ebebeb;
+  height: 82px;
+  margin-bottom: 10px;
+}
+
+/* line 365, ../sass/user-profile.scss */
+.place-single img {
+  height: 80px;
+  width: 80px;
+  border: none;
+  float: left;
+  margin-right: 10px;
+}
+
+/* line 373, ../sass/user-profile.scss */
+.place-name {
+  font-size: 18px;
+  line-height: 27px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  font-weight: bold;
+  color: #777777;
+  display: block;
+}
+
+/* line 380, ../sass/user-profile.scss */
+.place-single p {
+  float: left;
+  font-size: 10px;
+  line-height: 15px;
+  font-size: 0.625rem;
+  line-height: 0.9375rem;
+  padding: 10px;
+  color: #777777;
+}
+
+/* line 387, ../sass/user-profile.scss */
+.place-actions {
+  float: right;
+}
+/* line 389, ../sass/user-profile.scss */
+.place-actions li {
+  display: inline;
+  float: left;
+  padding: 10px;
+  padding-left: 0;
+}
+/* line 394, ../sass/user-profile.scss */
+.place-actions li a {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background-color: #1bb9b5;
+  text-decoration: none;
+  line-height: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+/* line 404, ../sass/user-profile.scss */
+.place-actions li a:hover {
+  background-color: #0069a0;
+}
+
+/* line 414, ../sass/user-profile.scss */
+.user-friends {
+  border-bottom: 0;
+}
+
+/* line 422, ../sass/user-profile.scss */
+.friend-single {
+  float: left;
+  width: 24%;
+  margin-right: 1.33333%;
+  margin-bottom: 10px;
+}
+
+/* line 429, ../sass/user-profile.scss */
+.friend-single:nth-child(4) {
+  margin-right: 0;
+}
+
+/* line 433, ../sass/user-profile.scss */
+.friend-img {
+  position: relative;
+  margin-bottom: 1px;
+}
+
+/* line 438, ../sass/user-profile.scss */
+.friend-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 444, ../sass/user-profile.scss */
+.friend-name {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  color: white;
+  background-color: #1bb9b5;
+  width: 100%;
+}
