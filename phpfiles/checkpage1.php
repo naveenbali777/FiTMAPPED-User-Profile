@@ -7,14 +7,14 @@ curl_setopt($ch, CURLOPT_URL,$url);
 curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)");		
 curl_setopt($ch, CURLOPT_COOKIEFILE, "new.cook");
 curl_setopt($ch, CURLOPT_COOKIEJAR, "new.cook"); 	
-curl_setopt($ch, CURLOPT_VERBOSE, 0);
+curl_setgfghfhopt($ch, CURLOPT_VERBOSE, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result2=curl_exec($ch);		
 //echo $result2;
-
-preg_match_all('<option value="(.*?)">',$result2,$catid);
+ghgfhgfhgh
+preg_match_dsfgfdall('<option value="(.*?)">',$result2,$catid);
 
 file_put_contents("shoplocal.csv","Product Name~Price~Image\r\n",FILE_APPEND);
 /*echo "<pre>";
